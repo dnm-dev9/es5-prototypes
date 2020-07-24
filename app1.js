@@ -17,6 +17,11 @@ iphone.prototype.phonedetails = function () {
   with model no ${this.modelno} and has maximum capacity of ${this.maxcap}`;
 };
 
+iphone.prototype.changemodelno = function(newmodelno) {
+  this.modelno = newmodelno;
+  this.modelchanged = true;
+}
+
 const iphone1 = new iphone('iphoneSE','2020','A2275','256GB');
 const iphone2 = new iphone('iphone 11 Pro','2019','A2160','512GB');
 const iphone3 = new iphone('iphone 11 Pro Max','2019','A2161','512GB');
@@ -27,6 +32,9 @@ const iphone7 = new iphone('iphone XR','2018','A1984','256GB');
 const iphone8 = new iphone('iphone X','2017','A1865','256GB');
 const iphone9 = new iphone('iphone 8','2017','A1863','256GB');
 
+// console.log(iphone1);
+// iphone1.changemodelno('A0000');
+// console.log(iphone1);
 console.log(iphone1.phonedetails());
 console.log(iphone2.phonedetails());
 console.log(iphone3.phonedetails());
